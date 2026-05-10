@@ -1,0 +1,1752 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "type": "text",
+      "id": "title",
+      "x": 40,
+      "y": 20,
+      "width": 900,
+      "height": 40,
+      "text": "FAST Societies Management System - ERD",
+      "originalText": "FAST Societies Management System - ERD",
+      "fontSize": 28,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "strokeColor": "#1e40af",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 1001,
+      "version": 2,
+      "versionNonce": 589817507,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "containerId": null,
+      "lineHeight": 1.25,
+      "index": "a0",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092452,
+      "autoResize": true
+    },
+    {
+      "type": "text",
+      "id": "legend",
+      "x": 40,
+      "y": 65,
+      "width": 900,
+      "height": 22,
+      "text": "PK = Primary Key    FK = Foreign Key    UQ = Unique    Arrows show child table -> parent table",
+      "originalText": "PK = Primary Key    FK = Foreign Key    UQ = Unique    Arrows show child table -> parent table",
+      "fontSize": 13,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "strokeColor": "#64748b",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 1003,
+      "version": 2,
+      "versionNonce": 1890158861,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "containerId": null,
+      "lineHeight": 1.25,
+      "index": "a1",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092452,
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "users",
+      "x": 520,
+      "y": 120,
+      "width": 270,
+      "height": 150,
+      "strokeColor": "#1e3a5f",
+      "backgroundColor": "#dbeafe",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2001,
+      "version": 2,
+      "versionNonce": 1868110403,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [
+        {
+          "id": "users_t",
+          "type": "text"
+        },
+        {
+          "id": "a_admin_user",
+          "type": "arrow"
+        },
+        {
+          "id": "a_student_user",
+          "type": "arrow"
+        }
+      ],
+      "link": null,
+      "locked": false,
+      "roundness": {
+        "type": 3
+      },
+      "index": "a2",
+      "frameId": null,
+      "updated": 1778431092452
+    },
+    {
+      "type": "text",
+      "id": "users_t",
+      "x": 535,
+      "y": 135,
+      "width": 240,
+      "height": 120,
+      "text": "USERS\n----------------------\nPK  UserID\nUQ  Email\n    PasswordHash\n    Role\n    IsActive\n    CreatedAt",
+      "originalText": "USERS\n----------------------\nPK  UserID\nUQ  Email\n    PasswordHash\n    Role\n    IsActive\n    CreatedAt",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "strokeColor": "#1e3a5f",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2003,
+      "version": 2,
+      "versionNonce": 571400045,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "containerId": "users",
+      "lineHeight": 1.25,
+      "index": "a3",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092452,
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "admins",
+      "x": 180,
+      "y": 340,
+      "width": 270,
+      "height": 130,
+      "strokeColor": "#7c2d12",
+      "backgroundColor": "#ffedd5",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2011,
+      "version": 2,
+      "versionNonce": 1919080931,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [
+        {
+          "id": "admins_t",
+          "type": "text"
+        },
+        {
+          "id": "a_admin_user",
+          "type": "arrow"
+        },
+        {
+          "id": "a_soc_admin",
+          "type": "arrow"
+        },
+        {
+          "id": "a_event_admin",
+          "type": "arrow"
+        }
+      ],
+      "link": null,
+      "locked": false,
+      "roundness": {
+        "type": 3
+      },
+      "index": "a4",
+      "frameId": null,
+      "updated": 1778431092452
+    },
+    {
+      "type": "text",
+      "id": "admins_t",
+      "x": 195,
+      "y": 355,
+      "width": 240,
+      "height": 100,
+      "text": "ADMINS\n----------------------\nPK  AdminID\nFK  UserID -> Users\n    FirstName\n    LastName\n    Phone",
+      "originalText": "ADMINS\n----------------------\nPK  AdminID\nFK  UserID -> Users\n    FirstName\n    LastName\n    Phone",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "strokeColor": "#7c2d12",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2013,
+      "version": 2,
+      "versionNonce": 2100980173,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "containerId": "admins",
+      "lineHeight": 1.25,
+      "index": "a5",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092452,
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "students",
+      "x": 860,
+      "y": 340,
+      "width": 300,
+      "height": 165,
+      "strokeColor": "#166534",
+      "backgroundColor": "#dcfce7",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2021,
+      "version": 2,
+      "versionNonce": 1498654083,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [
+        {
+          "id": "students_t",
+          "type": "text"
+        },
+        {
+          "id": "a_student_user",
+          "type": "arrow"
+        },
+        {
+          "id": "a_soc_student",
+          "type": "arrow"
+        },
+        {
+          "id": "a_req_student",
+          "type": "arrow"
+        },
+        {
+          "id": "a_member_student",
+          "type": "arrow"
+        },
+        {
+          "id": "a_reg_student",
+          "type": "arrow"
+        },
+        {
+          "id": "a_task_student",
+          "type": "arrow"
+        },
+        {
+          "id": "a_ann_student",
+          "type": "arrow"
+        }
+      ],
+      "link": null,
+      "locked": false,
+      "roundness": {
+        "type": 3
+      },
+      "index": "a6",
+      "frameId": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "text",
+      "id": "students_t",
+      "x": 875,
+      "y": 355,
+      "width": 270,
+      "height": 135,
+      "text": "STUDENTS\n----------------------\nPK  StudentID\nFK  UserID -> Users\nUQ  RegistrationNumber\n    FirstName, LastName\n    Department, Semester\n    Phone",
+      "originalText": "STUDENTS\n----------------------\nPK  StudentID\nFK  UserID -> Users\nUQ  RegistrationNumber\n    FirstName, LastName\n    Department, Semester\n    Phone",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "strokeColor": "#166534",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2023,
+      "version": 2,
+      "versionNonce": 1397073965,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "containerId": "students",
+      "lineHeight": 1.25,
+      "index": "a7",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453,
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "societies",
+      "x": 500,
+      "y": 600,
+      "width": 320,
+      "height": 165,
+      "strokeColor": "#1e40af",
+      "backgroundColor": "#dbeafe",
+      "fillStyle": "solid",
+      "strokeWidth": 3,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2031,
+      "version": 2,
+      "versionNonce": 728366371,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [
+        {
+          "id": "societies_t",
+          "type": "text"
+        },
+        {
+          "id": "a_soc_student",
+          "type": "arrow"
+        },
+        {
+          "id": "a_soc_admin",
+          "type": "arrow"
+        },
+        {
+          "id": "a_req_soc",
+          "type": "arrow"
+        },
+        {
+          "id": "a_member_soc",
+          "type": "arrow"
+        },
+        {
+          "id": "a_event_soc",
+          "type": "arrow"
+        },
+        {
+          "id": "a_task_soc",
+          "type": "arrow"
+        },
+        {
+          "id": "a_ann_soc",
+          "type": "arrow"
+        }
+      ],
+      "link": null,
+      "locked": false,
+      "roundness": {
+        "type": 3
+      },
+      "index": "a8",
+      "frameId": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "text",
+      "id": "societies_t",
+      "x": 515,
+      "y": 615,
+      "width": 290,
+      "height": 135,
+      "text": "SOCIETIES\n----------------------\nPK  SocietyID\nUQ  Name\nFK  HeadStudentID -> Students\nFK  ApprovedByAdminID -> Admins\n    Description, Category\n    Status, CreatedAt",
+      "originalText": "SOCIETIES\n----------------------\nPK  SocietyID\nUQ  Name\nFK  HeadStudentID -> Students\nFK  ApprovedByAdminID -> Admins\n    Description, Category\n    Status, CreatedAt",
+      "fontSize": 14,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "strokeColor": "#1e40af",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2033,
+      "version": 2,
+      "versionNonce": 370809485,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "containerId": "societies",
+      "lineHeight": 1.25,
+      "index": "a9",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453,
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "requests",
+      "x": 40,
+      "y": 870,
+      "width": 320,
+      "height": 165,
+      "strokeColor": "#6d28d9",
+      "backgroundColor": "#ede9fe",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2041,
+      "version": 2,
+      "versionNonce": 68444355,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [
+        {
+          "id": "requests_t",
+          "type": "text"
+        },
+        {
+          "id": "a_req_soc",
+          "type": "arrow"
+        },
+        {
+          "id": "a_req_student",
+          "type": "arrow"
+        }
+      ],
+      "link": null,
+      "locked": false,
+      "roundness": {
+        "type": 3
+      },
+      "index": "aA",
+      "frameId": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "text",
+      "id": "requests_t",
+      "x": 55,
+      "y": 885,
+      "width": 290,
+      "height": 135,
+      "text": "MEMBERSHIP_REQUESTS\n----------------------\nPK  RequestID\nFK  StudentID -> Students\nFK  SocietyID -> Societies\nFK  ProcessedByHeadID -> Students\n    Status, RequestedAt\n    ProcessedAt, RejectionReason",
+      "originalText": "MEMBERSHIP_REQUESTS\n----------------------\nPK  RequestID\nFK  StudentID -> Students\nFK  SocietyID -> Societies\nFK  ProcessedByHeadID -> Students\n    Status, RequestedAt\n    ProcessedAt, RejectionReason",
+      "fontSize": 13,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "strokeColor": "#6d28d9",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2043,
+      "version": 2,
+      "versionNonce": 1047609581,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "containerId": "requests",
+      "lineHeight": 1.25,
+      "index": "aB",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453,
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "members",
+      "x": 400,
+      "y": 870,
+      "width": 280,
+      "height": 135,
+      "strokeColor": "#6d28d9",
+      "backgroundColor": "#ede9fe",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2051,
+      "version": 2,
+      "versionNonce": 217141347,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [
+        {
+          "id": "members_t",
+          "type": "text"
+        },
+        {
+          "id": "a_member_soc",
+          "type": "arrow"
+        },
+        {
+          "id": "a_member_student",
+          "type": "arrow"
+        }
+      ],
+      "link": null,
+      "locked": false,
+      "roundness": {
+        "type": 3
+      },
+      "index": "aC",
+      "frameId": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "text",
+      "id": "members_t",
+      "x": 415,
+      "y": 885,
+      "width": 250,
+      "height": 105,
+      "text": "SOCIETY_MEMBERS\n----------------------\nPK  MemberID\nFK  StudentID -> Students\nFK  SocietyID -> Societies\n    Role, JoinedAt, IsActive",
+      "originalText": "SOCIETY_MEMBERS\n----------------------\nPK  MemberID\nFK  StudentID -> Students\nFK  SocietyID -> Societies\n    Role, JoinedAt, IsActive",
+      "fontSize": 13,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "strokeColor": "#6d28d9",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2053,
+      "version": 2,
+      "versionNonce": 1909758797,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "containerId": "members",
+      "lineHeight": 1.25,
+      "index": "aD",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453,
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "events",
+      "x": 720,
+      "y": 870,
+      "width": 300,
+      "height": 165,
+      "strokeColor": "#be123c",
+      "backgroundColor": "#ffe4e6",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2061,
+      "version": 2,
+      "versionNonce": 936332291,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [
+        {
+          "id": "events_t",
+          "type": "text"
+        },
+        {
+          "id": "a_event_soc",
+          "type": "arrow"
+        },
+        {
+          "id": "a_event_admin",
+          "type": "arrow"
+        },
+        {
+          "id": "a_reg_event",
+          "type": "arrow"
+        }
+      ],
+      "link": null,
+      "locked": false,
+      "roundness": {
+        "type": 3
+      },
+      "index": "aE",
+      "frameId": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "text",
+      "id": "events_t",
+      "x": 735,
+      "y": 885,
+      "width": 270,
+      "height": 135,
+      "text": "EVENTS\n----------------------\nPK  EventID\nFK  SocietyID -> Societies\nFK  ApprovedByAdminID -> Admins\n    Title, Description\n    EventDate, EndDate, Venue\n    MaxParticipants, Status",
+      "originalText": "EVENTS\n----------------------\nPK  EventID\nFK  SocietyID -> Societies\nFK  ApprovedByAdminID -> Admins\n    Title, Description\n    EventDate, EndDate, Venue\n    MaxParticipants, Status",
+      "fontSize": 13,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "strokeColor": "#be123c",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2063,
+      "version": 2,
+      "versionNonce": 1755163053,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "containerId": "events",
+      "lineHeight": 1.25,
+      "index": "aF",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453,
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "announcements",
+      "x": 1060,
+      "y": 870,
+      "width": 320,
+      "height": 150,
+      "strokeColor": "#be123c",
+      "backgroundColor": "#ffe4e6",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2071,
+      "version": 2,
+      "versionNonce": 950850467,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [
+        {
+          "id": "announcements_t",
+          "type": "text"
+        },
+        {
+          "id": "a_ann_soc",
+          "type": "arrow"
+        },
+        {
+          "id": "a_ann_student",
+          "type": "arrow"
+        }
+      ],
+      "link": null,
+      "locked": false,
+      "roundness": {
+        "type": 3
+      },
+      "index": "aG",
+      "frameId": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "text",
+      "id": "announcements_t",
+      "x": 1075,
+      "y": 885,
+      "width": 290,
+      "height": 120,
+      "text": "ANNOUNCEMENTS\n----------------------\nPK  AnnouncementID\nFK  SocietyID -> Societies\nFK  CreatedByStudentID -> Students\n    Title, Content\n    Priority, IsActive, CreatedAt",
+      "originalText": "ANNOUNCEMENTS\n----------------------\nPK  AnnouncementID\nFK  SocietyID -> Societies\nFK  CreatedByStudentID -> Students\n    Title, Content\n    Priority, IsActive, CreatedAt",
+      "fontSize": 13,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "strokeColor": "#be123c",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2073,
+      "version": 2,
+      "versionNonce": 334883853,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "containerId": "announcements",
+      "lineHeight": 1.25,
+      "index": "aH",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453,
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "tasks",
+      "x": 400,
+      "y": 1120,
+      "width": 300,
+      "height": 165,
+      "strokeColor": "#0f766e",
+      "backgroundColor": "#ccfbf1",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2081,
+      "version": 2,
+      "versionNonce": 1069049667,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [
+        {
+          "id": "tasks_t",
+          "type": "text"
+        },
+        {
+          "id": "a_task_soc",
+          "type": "arrow"
+        },
+        {
+          "id": "a_task_student",
+          "type": "arrow"
+        }
+      ],
+      "link": null,
+      "locked": false,
+      "roundness": {
+        "type": 3
+      },
+      "index": "aI",
+      "frameId": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "text",
+      "id": "tasks_t",
+      "x": 415,
+      "y": 1135,
+      "width": 270,
+      "height": 135,
+      "text": "TASKS\n----------------------\nPK  TaskID\nFK  SocietyID -> Societies\nFK  AssignedToStudentID -> Students\nFK  AssignedByStudentID -> Students\n    Title, Description\n    DueDate, Status, CompletedAt",
+      "originalText": "TASKS\n----------------------\nPK  TaskID\nFK  SocietyID -> Societies\nFK  AssignedToStudentID -> Students\nFK  AssignedByStudentID -> Students\n    Title, Description\n    DueDate, Status, CompletedAt",
+      "fontSize": 13,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "strokeColor": "#0f766e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2083,
+      "version": 2,
+      "versionNonce": 64414317,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "containerId": "tasks",
+      "lineHeight": 1.25,
+      "index": "aJ",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453,
+      "autoResize": true
+    },
+    {
+      "type": "rectangle",
+      "id": "registrations",
+      "x": 760,
+      "y": 1120,
+      "width": 320,
+      "height": 135,
+      "strokeColor": "#0f766e",
+      "backgroundColor": "#ccfbf1",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2091,
+      "version": 2,
+      "versionNonce": 1934657251,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [
+        {
+          "id": "registrations_t",
+          "type": "text"
+        },
+        {
+          "id": "a_reg_event",
+          "type": "arrow"
+        },
+        {
+          "id": "a_reg_student",
+          "type": "arrow"
+        }
+      ],
+      "link": null,
+      "locked": false,
+      "roundness": {
+        "type": 3
+      },
+      "index": "aK",
+      "frameId": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "text",
+      "id": "registrations_t",
+      "x": 775,
+      "y": 1135,
+      "width": 290,
+      "height": 105,
+      "text": "EVENT_REGISTRATIONS\n----------------------\nPK  RegistrationID\nFK  EventID -> Events\nFK  StudentID -> Students\nUQ  TicketCode\n    AttendanceStatus",
+      "originalText": "EVENT_REGISTRATIONS\n----------------------\nPK  RegistrationID\nFK  EventID -> Events\nFK  StudentID -> Students\nUQ  TicketCode\n    AttendanceStatus",
+      "fontSize": 13,
+      "fontFamily": 3,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "strokeColor": "#0f766e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 2093,
+      "version": 2,
+      "versionNonce": 218762445,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "containerId": "registrations",
+      "lineHeight": 1.25,
+      "index": "aL",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453,
+      "autoResize": true
+    },
+    {
+      "type": "arrow",
+      "id": "a_admin_user",
+      "x": 450,
+      "y": 385,
+      "width": 80,
+      "height": 155,
+      "strokeColor": "#334155",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 3001,
+      "version": 2,
+      "versionNonce": 704885379,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          80,
+          -155
+        ]
+      ],
+      "startBinding": {
+        "elementId": "admins",
+        "focus": 0,
+        "gap": 2
+      },
+      "endBinding": {
+        "elementId": "users",
+        "focus": -0.5,
+        "gap": 2
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "lastCommittedPoint": null,
+      "index": "aM",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "arrow",
+      "id": "a_student_user",
+      "x": 860,
+      "y": 385,
+      "width": 80,
+      "height": 155,
+      "strokeColor": "#334155",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 3003,
+      "version": 2,
+      "versionNonce": 791210797,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -80,
+          -155
+        ]
+      ],
+      "startBinding": {
+        "elementId": "students",
+        "focus": 0,
+        "gap": 2
+      },
+      "endBinding": {
+        "elementId": "users",
+        "focus": 0.5,
+        "gap": 2
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "lastCommittedPoint": null,
+      "index": "aN",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "arrow",
+      "id": "a_soc_student",
+      "x": 820,
+      "y": 650,
+      "width": 125,
+      "height": 145,
+      "strokeColor": "#166534",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 3005,
+      "version": 2,
+      "versionNonce": 1687185955,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          125,
+          -145
+        ]
+      ],
+      "startBinding": {
+        "elementId": "societies",
+        "focus": 0.5,
+        "gap": 2
+      },
+      "endBinding": {
+        "elementId": "students",
+        "focus": -0.4,
+        "gap": 2
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "lastCommittedPoint": null,
+      "index": "aO",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "arrow",
+      "id": "a_soc_admin",
+      "x": 500,
+      "y": 650,
+      "width": 110,
+      "height": 180,
+      "strokeColor": "#7c2d12",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 3007,
+      "version": 2,
+      "versionNonce": 983367053,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -110,
+          -180
+        ]
+      ],
+      "startBinding": {
+        "elementId": "societies",
+        "focus": -0.5,
+        "gap": 2
+      },
+      "endBinding": {
+        "elementId": "admins",
+        "focus": 0.3,
+        "gap": 2
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "lastCommittedPoint": null,
+      "index": "aP",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "arrow",
+      "id": "a_req_soc",
+      "x": 360,
+      "y": 900,
+      "width": 170,
+      "height": 135,
+      "strokeColor": "#6d28d9",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 3009,
+      "version": 2,
+      "versionNonce": 132459971,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          170,
+          -135
+        ]
+      ],
+      "startBinding": {
+        "elementId": "requests",
+        "focus": -0.2,
+        "gap": 2
+      },
+      "endBinding": {
+        "elementId": "societies",
+        "focus": -0.6,
+        "gap": 2
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "lastCommittedPoint": null,
+      "index": "aQ",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "arrow",
+      "id": "a_req_student",
+      "x": 220,
+      "y": 870,
+      "width": 675,
+      "height": 365,
+      "strokeColor": "#166534",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dotted",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 3011,
+      "version": 2,
+      "versionNonce": 916440045,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          675,
+          -365
+        ]
+      ],
+      "startBinding": {
+        "elementId": "requests",
+        "focus": 0,
+        "gap": 2
+      },
+      "endBinding": {
+        "elementId": "students",
+        "focus": -0.6,
+        "gap": 2
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "lastCommittedPoint": null,
+      "index": "aR",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "arrow",
+      "id": "a_member_soc",
+      "x": 540,
+      "y": 870,
+      "width": 40,
+      "height": 105,
+      "strokeColor": "#6d28d9",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 3013,
+      "version": 2,
+      "versionNonce": 1461747043,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          40,
+          -105
+        ]
+      ],
+      "startBinding": {
+        "elementId": "members",
+        "focus": -0.3,
+        "gap": 2
+      },
+      "endBinding": {
+        "elementId": "societies",
+        "focus": -0.2,
+        "gap": 2
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "lastCommittedPoint": null,
+      "index": "aS",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "arrow",
+      "id": "a_member_student",
+      "x": 680,
+      "y": 905,
+      "width": 250,
+      "height": 400,
+      "strokeColor": "#166534",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dotted",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 3015,
+      "version": 2,
+      "versionNonce": 121290317,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          250,
+          -400
+        ]
+      ],
+      "startBinding": {
+        "elementId": "members",
+        "focus": 0.4,
+        "gap": 2
+      },
+      "endBinding": {
+        "elementId": "students",
+        "focus": -0.2,
+        "gap": 2
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "lastCommittedPoint": null,
+      "index": "aT",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "arrow",
+      "id": "a_event_soc",
+      "x": 845,
+      "y": 870,
+      "width": 70,
+      "height": 105,
+      "strokeColor": "#be123c",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 3017,
+      "version": 2,
+      "versionNonce": 764467459,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -70,
+          -105
+        ]
+      ],
+      "startBinding": {
+        "elementId": "events",
+        "focus": -0.1,
+        "gap": 2
+      },
+      "endBinding": {
+        "elementId": "societies",
+        "focus": 0.3,
+        "gap": 2
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "lastCommittedPoint": null,
+      "index": "aU",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "arrow",
+      "id": "a_event_admin",
+      "x": 720,
+      "y": 910,
+      "width": 300,
+      "height": 440,
+      "strokeColor": "#7c2d12",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dotted",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 3019,
+      "version": 2,
+      "versionNonce": 1397189805,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -300,
+          -440
+        ]
+      ],
+      "startBinding": {
+        "elementId": "events",
+        "focus": -0.6,
+        "gap": 2
+      },
+      "endBinding": {
+        "elementId": "admins",
+        "focus": 0.6,
+        "gap": 2
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "lastCommittedPoint": null,
+      "index": "aV",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "arrow",
+      "id": "a_ann_soc",
+      "x": 1060,
+      "y": 900,
+      "width": 240,
+      "height": 135,
+      "strokeColor": "#be123c",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 3021,
+      "version": 2,
+      "versionNonce": 2025111715,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -240,
+          -135
+        ]
+      ],
+      "startBinding": {
+        "elementId": "announcements",
+        "focus": -0.5,
+        "gap": 2
+      },
+      "endBinding": {
+        "elementId": "societies",
+        "focus": 0.7,
+        "gap": 2
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "lastCommittedPoint": null,
+      "index": "aW",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "arrow",
+      "id": "a_ann_student",
+      "x": 1220,
+      "y": 870,
+      "width": 120,
+      "height": 365,
+      "strokeColor": "#166534",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dotted",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 3023,
+      "version": 2,
+      "versionNonce": 711937805,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -120,
+          -365
+        ]
+      ],
+      "startBinding": {
+        "elementId": "announcements",
+        "focus": 0.2,
+        "gap": 2
+      },
+      "endBinding": {
+        "elementId": "students",
+        "focus": 0.5,
+        "gap": 2
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "lastCommittedPoint": null,
+      "index": "aX",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "arrow",
+      "id": "a_task_soc",
+      "x": 520,
+      "y": 1120,
+      "width": 80,
+      "height": 355,
+      "strokeColor": "#0f766e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 3025,
+      "version": 2,
+      "versionNonce": 1916449859,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          80,
+          -355
+        ]
+      ],
+      "startBinding": {
+        "elementId": "tasks",
+        "focus": -0.2,
+        "gap": 2
+      },
+      "endBinding": {
+        "elementId": "societies",
+        "focus": -0.1,
+        "gap": 2
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "lastCommittedPoint": null,
+      "index": "aY",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "arrow",
+      "id": "a_task_student",
+      "x": 700,
+      "y": 1160,
+      "width": 240,
+      "height": 655,
+      "strokeColor": "#166534",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dotted",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 3027,
+      "version": 2,
+      "versionNonce": 1798038893,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          240,
+          -655
+        ]
+      ],
+      "startBinding": {
+        "elementId": "tasks",
+        "focus": 0.5,
+        "gap": 2
+      },
+      "endBinding": {
+        "elementId": "students",
+        "focus": 0,
+        "gap": 2
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "lastCommittedPoint": null,
+      "index": "aZ",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "arrow",
+      "id": "a_reg_event",
+      "x": 920,
+      "y": 1120,
+      "width": 40,
+      "height": 85,
+      "strokeColor": "#0f766e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 3029,
+      "version": 2,
+      "versionNonce": 436286435,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -40,
+          -85
+        ]
+      ],
+      "startBinding": {
+        "elementId": "registrations",
+        "focus": 0,
+        "gap": 2
+      },
+      "endBinding": {
+        "elementId": "events",
+        "focus": 0.2,
+        "gap": 2
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "lastCommittedPoint": null,
+      "index": "aa",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431092453
+    },
+    {
+      "type": "arrow",
+      "id": "a_reg_student",
+      "x": 1027.6857519692344,
+      "y": 1102.6229644376651,
+      "width": 5.313358281054207,
+      "height": 602.6856232188361,
+      "strokeColor": "#166534",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "dotted",
+      "roughness": 0,
+      "opacity": 100,
+      "angle": 0,
+      "seed": 3031,
+      "version": 178,
+      "versionNonce": 1339765773,
+      "isDeleted": false,
+      "groupIds": [],
+      "boundElements": [],
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          5.313358281054207,
+          -602.6856232188361
+        ]
+      ],
+      "startBinding": {
+        "elementId": "registrations",
+        "focus": 0.6658825313793527,
+        "gap": 17.377035562334868
+      },
+      "endBinding": {
+        "elementId": "students",
+        "focus": -0.15711688235606758,
+        "gap": 5.062658781170967
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "lastCommittedPoint": null,
+      "index": "ab",
+      "frameId": null,
+      "roundness": null,
+      "updated": 1778431230443
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

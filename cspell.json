@@ -1,0 +1,53 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "ignorePaths": [
+    "node_modules/**",
+    "bin/**",
+    "obj/**",
+    ".git/**",
+    "**/*.excalidraw",
+    "**/*.deps.json",
+    "**/*.runtimeconfig.json",
+    "**/*.dll",
+    "**/*.pdb",
+    "**/*.exe"
+  ],
+  "ignoreRegExpList": [
+    "`[^`]+`",
+    "```[\\s\\S]*?```",
+    "[A-Z]{2,}[a-z]*",
+    "[A-Z][a-z]+[A-Z][A-Za-z0-9]*",
+    "_[A-Za-z0-9_]+",
+    "[a-z]+_[a-z0-9_]+",
+    "[A-Za-z]+\\(\\)",
+    "https?://\\S+"
+  ],
+  "words": [
+    "abdul",
+    "qudoos",
+    "chidamber",
+    "kemerer",
+    "bcrypt",
+    "winforms",
+    "csproj",
+    "msbuild",
+    "anemic",
+    "behaviour",
+    "realisation",
+    "realisations",
+    "realises",
+    "instantiates",
+    "instantiation",
+    "decompose",
+    "decomposed",
+    "decomposing",
+    "decomposition",
+    "monolithic",
+    "lifecycle",
+    "auth",
+    "repo",
+    "repos",
+    "fast"
+  ]
+}
