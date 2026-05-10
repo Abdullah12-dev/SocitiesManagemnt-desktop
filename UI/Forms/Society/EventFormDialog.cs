@@ -32,7 +32,7 @@ public class EventFormDialog : Form
     {
         bool isEdit     = _existing != null;
         Text            = isEdit ? "Edit Event" : "Create New Event";
-        Size            = new Size(540, 540);
+        Size            = new Size(540, 600);
         StartPosition   = FormStartPosition.CenterParent;
         FormBorderStyle = FormBorderStyle.FixedDialog;
         MaximizeBox     = false;
@@ -42,7 +42,7 @@ public class EventFormDialog : Form
         var lblH   = new Label { Text = isEdit ? "Edit Event" : "New Event", Font = AppTheme.FontH1, ForeColor = Color.White, AutoSize = true, Location = new Point(20, 16) };
         header.Controls.Add(lblH);
 
-        var body = new Panel { Location = new Point(0, 60), Size = new Size(540, 420), Padding = new Padding(24, 12, 24, 12) };
+        var body = new Panel { Location = new Point(0, 60), Size = new Size(540, 480), Padding = new Padding(24, 12, 24, 12) };
         int y = 16;
 
         body.Controls.Add(L("Event Title", 0, y));

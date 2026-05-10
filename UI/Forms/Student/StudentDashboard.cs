@@ -11,11 +11,12 @@ public class StudentDashboard : BaseShellForm
 {
     private readonly User          _user;
     private readonly Models.Student _student;
-    private readonly SocietyService     _societyService     = new();
-    private readonly MembershipService  _membershipService  = new();
-    private readonly EventService       _eventService       = new();
+    private readonly SocietyService      _societyService      = new();
+    private readonly MembershipService   _membershipService   = new();
+    private readonly EventService        _eventService        = new();
     private readonly AnnouncementService _announcementService = new();
-    private readonly ReportService      _reportService      = new();
+    private readonly ReportService       _reportService       = new();
+    private readonly TaskService         _taskService         = new();
 
     public StudentDashboard(User user, Models.Student student)
     {
@@ -29,12 +30,13 @@ public class StudentDashboard : BaseShellForm
     private void BuildNav()
     {
         int y = 155;
-        AddNavItem("   Dashboard",    y,       () => { LblPageTitle.Text = "Dashboard";         ShowPage(BuildDashboardPage()); });
-        AddNavItem("   Browse Societies", y+44, () => { LblPageTitle.Text = "Browse Societies"; ShowPage(BuildBrowseSocietiesPage()); });
-        AddNavItem("   My Memberships",  y+88, () => { LblPageTitle.Text = "My Memberships";   ShowPage(BuildMyMembershipsPage()); });
-        AddNavItem("   Events",      y+132,    () => { LblPageTitle.Text = "Upcoming Events";   ShowPage(BuildEventsPage()); });
-        AddNavItem("   My Tickets",  y+176,    () => { LblPageTitle.Text = "My Event Tickets";  ShowPage(BuildTicketsPage()); });
-        AddNavItem("   Announcements", y+220,  () => { LblPageTitle.Text = "Announcements";     ShowPage(BuildAnnouncementsPage()); });
+        AddNavItem("   Dashboard",       y,      () => { LblPageTitle.Text = "Dashboard";        ShowPage(BuildDashboardPage()); });
+        AddNavItem("   Browse Societies",y+44,  () => { LblPageTitle.Text = "Browse Societies"; ShowPage(BuildBrowseSocietiesPage()); });
+        AddNavItem("   My Memberships",  y+88,  () => { LblPageTitle.Text = "My Memberships";   ShowPage(BuildMyMembershipsPage()); });
+        AddNavItem("   Events",          y+132, () => { LblPageTitle.Text = "Upcoming Events";  ShowPage(BuildEventsPage()); });
+        AddNavItem("   My Tickets",      y+176, () => { LblPageTitle.Text = "My Event Tickets"; ShowPage(BuildTicketsPage()); });
+        AddNavItem("   My Tasks",        y+220, () => { LblPageTitle.Text = "My Tasks";         ShowPage(BuildMyTasksPage()); });
+        AddNavItem("   Announcements",   y+264, () => { LblPageTitle.Text = "Announcements";    ShowPage(BuildAnnouncementsPage()); });
     }
 
     // ── Dashboard home ────────────────────────────────────────────────
@@ -414,6 +416,96 @@ public class StudentDashboard : BaseShellForm
 
         card.Controls.AddRange(new Control[] { strip, lblTitle, lblMeta, lblContent, lblPriority });
         return card;
+    }
+
+    // ── My Tasks ─────────────────────────────────────────────────────
+    private Panel BuildMyTasksPage()
+    {
+        var page = new Panel { BackColor = AppTheme.Background };
+
+        var grid = new DataGridView
+        {
+            AllowUserToAddRows    = false,
+            AllowUserToDeleteRows = false,
+            ReadOnly              = true,
+            ColumnCount           = 6,
+            SelectionMode         = DataGridViewSelectionMode.FullRowSelect,
+            BackgroundColor       = Color.White,
+            BorderStyle           = BorderStyle.None,
+            RowHeadersVisible     = false,
+            AutoSizeColumnsMode   = DataGridViewAutoSizeColumnsMode.Fill,
+            Font                  = AppTheme.FontSmall,
+            GridColor             = AppTheme.Border,
+            Location              = new Point(0, 44),
+            Anchor                = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right
+        };
+        grid.ColumnHeadersDefaultCellStyle.BackColor = AppTheme.Primary;
+        grid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+        grid.ColumnHeadersDefaultCellStyle.Font      = new Font("Segoe UI", 9f, FontStyle.Bold);
+        grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+        grid.ColumnHeadersHeight         = 36;
+        grid.EnableHeadersVisualStyles   = false;
+        grid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(248, 250, 252);
+
+        grid.Columns[0].HeaderText = "ID";
+        grid.Columns[1].HeaderText = "Title";
+        grid.Columns[2].HeaderText = "Society";
+        grid.Columns[3].HeaderText = "Due Date";
+        grid.Columns[4].HeaderText = "Status";
+        grid.Columns[5].HeaderText = "Assigned By";
+
+        page.Resize += (_, _) => grid.Size = new Size(page.Width - 20, page.Height - 60);
+        grid.Size    = new Size(800, 400);
+
+        void LoadTasks()
+        {
+            grid.Rows.Clear();
+            foreach (var t in _taskService.GetTasksByStudent(_student.StudentID))
+                grid.Rows.Add(t.TaskID, t.Title, t.SocietyName,
+                              t.DueDate?.ToString("dd-MMM-yyyy") ?? "No deadline",
+                              t.Status, t.AssignedByName);
+        }
+        LoadTasks();
+
+        // Status colour per row
+        grid.RowPrePaint += (_, e) =>
+        {
+            if (e.RowIndex < 0 || e.RowIndex >= grid.Rows.Count) return;
+            var status = grid.Rows[e.RowIndex].Cells[4].Value?.ToString() ?? "";
+            grid.Rows[e.RowIndex].DefaultCellStyle.ForeColor = status switch
+            {
+                "Completed"  => AppTheme.Success,
+                "InProgress" => AppTheme.Accent,
+                "Overdue"    => AppTheme.Danger,
+                _            => AppTheme.TextPrimary
+            };
+        };
+
+        var btnInProgress = new ModernButton { Text = "Mark In Progress", Location = new Point(0, 0), Size = new Size(170, 34), ButtonStyle = ButtonStyle.Outline };
+        var btnDone       = new ModernButton { Text = "Mark Complete",    Location = new Point(184, 0), Size = new Size(160, 34), ButtonStyle = ButtonStyle.Success };
+
+        btnInProgress.Click += (_, _) =>
+        {
+            if (grid.SelectedRows.Count == 0) return;
+            int id = (int)grid.SelectedRows[0].Cells[0].Value;
+            var (ok, msg) = _taskService.UpdateTaskStatus(id, "InProgress");
+            MessageBox.Show(msg, ok ? "Done" : "Error", MessageBoxButtons.OK,
+                ok ? MessageBoxIcon.Information : MessageBoxIcon.Error);
+            if (ok) LoadTasks();
+        };
+
+        btnDone.Click += (_, _) =>
+        {
+            if (grid.SelectedRows.Count == 0) return;
+            int id = (int)grid.SelectedRows[0].Cells[0].Value;
+            var (ok, msg) = _taskService.UpdateTaskStatus(id, "Completed");
+            MessageBox.Show(msg, ok ? "Done" : "Error", MessageBoxButtons.OK,
+                ok ? MessageBoxIcon.Information : MessageBoxIcon.Error);
+            if (ok) LoadTasks();
+        };
+
+        page.Controls.AddRange(new Control[] { btnInProgress, btnDone, grid });
+        return page;
     }
 
     // ── Helper ────────────────────────────────────────────────────────

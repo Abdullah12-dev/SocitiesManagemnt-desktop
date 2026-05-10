@@ -31,7 +31,7 @@ public class TaskFormDialog : Form
     private void Build()
     {
         Text            = "Assign Task";
-        Size            = new Size(500, 420);
+        Size            = new Size(500, 480);
         StartPosition   = FormStartPosition.CenterParent;
         FormBorderStyle = FormBorderStyle.FixedDialog;
         MaximizeBox     = false;
@@ -40,7 +40,7 @@ public class TaskFormDialog : Form
         var header = new Panel { Dock = DockStyle.Top, Height = 56, BackColor = AppTheme.Primary };
         header.Controls.Add(new Label { Text = "Assign Task to Member", Font = AppTheme.FontH2, ForeColor = Color.White, AutoSize = true, Location = new Point(20, 14) });
 
-        var body = new Panel { Location = new Point(0, 56), Size = new Size(500, 340), Padding = new Padding(24) };
+        var body = new Panel { Location = new Point(0, 56), Size = new Size(500, 400), Padding = new Padding(24) };
 
         int y = 10;
         body.Controls.Add(L("Task Title", 0, y));

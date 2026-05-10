@@ -26,7 +26,7 @@ public class AnnouncementFormDialog : Form
     private void Build()
     {
         Text            = "Post Announcement";
-        Size            = new Size(520, 400);
+        Size            = new Size(520, 460);
         StartPosition   = FormStartPosition.CenterParent;
         FormBorderStyle = FormBorderStyle.FixedDialog;
         MaximizeBox     = false;
@@ -35,7 +35,7 @@ public class AnnouncementFormDialog : Form
         var header = new Panel { Dock = DockStyle.Top, Height = 56, BackColor = AppTheme.Primary };
         header.Controls.Add(new Label { Text = "New Announcement", Font = AppTheme.FontH2, ForeColor = Color.White, AutoSize = true, Location = new Point(20, 14) });
 
-        var body = new Panel { Location = new Point(0, 56), Size = new Size(520, 330), Padding = new Padding(24) };
+        var body = new Panel { Location = new Point(0, 56), Size = new Size(520, 390), Padding = new Padding(24) };
 
         int y = 10;
         body.Controls.Add(L("Title", 0, y));

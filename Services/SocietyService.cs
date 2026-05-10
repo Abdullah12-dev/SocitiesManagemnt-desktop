@@ -96,8 +96,8 @@ public class SocietyService
         userRepo.UpdateRole(newHead.UserID, "SocietyHead");
         _societyRepo.AssignHead(societyId, newStudentId);
 
-        if (!_memberRepo.IsMember(newStudentId, societyId))
-            _memberRepo.AddMember(newStudentId, societyId, "Head");
+        // Always upsert as Head role (AddMember does INSERT or UPDATE)
+        _memberRepo.AddMember(newStudentId, societyId, "Head");
 
         return (true, "Society head assigned successfully.");
     }

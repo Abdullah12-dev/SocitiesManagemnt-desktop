@@ -49,3 +49,4 @@ D:\Projects\SMM Project\SocietiesManagementSystem\obj\Debug\net8.0-windows\refin
 D:\Projects\SMM Project\SocietiesManagementSystem\obj\Debug\net8.0-windows\SocietiesManagementSystem.pdb
 D:\Projects\SMM Project\SocietiesManagementSystem\obj\Debug\net8.0-windows\SocietiesManagementSystem.genruntimeconfig.cache
 D:\Projects\SMM Project\SocietiesManagementSystem\obj\Debug\net8.0-windows\ref\SocietiesManagementSystem.dll
+D:\Projects\SMM Project\SocietiesManagementSystem\obj\Debug\net8.0-windows\SocietiesManagementSystem.sourcelink.json
