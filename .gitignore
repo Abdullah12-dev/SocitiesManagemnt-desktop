@@ -41,16 +41,14 @@ project.fragment.lock.json
 artifacts/
 
 # ============================================================
-# Node.js (for diagram-generator script)
+# Node.js  (no longer used — keep ignored in case anyone runs npm)
 # ============================================================
 node_modules/
+package-lock.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
-
-# Generated artifacts
-ClassDiagram.excalidraw
 
 # ============================================================
 # OS / editor noise
@@ -61,7 +59,6 @@ Desktop.ini
 .DS_Store
 
 # ============================================================
-# Local agent / tool config (not for the repo)
+# Local agent / tool config (skills under .cursor/skills/ ARE tracked)
 # ============================================================
 .claude/
-.cursor/
